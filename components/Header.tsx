@@ -3,23 +3,30 @@ import { useState } from 'react'
 
 
 export default function Header() {
+  // spin absolute right-1/2 top-1/2 -translate-x-16 rotate-[-90deg] text-8xl uppercase'
+  const spinHello = (text: string) => {
+      return text.split('').map((item, index) => {
+            return (<span key={item} className={`rotate-[${index * 50}deg]`}>{item}</span>)
+      })
+}
+
 
   return (
     <div className='flex gap-x-20 w-full m-4 justify-center items-center'>
-      <div className='w-1/3	flex justify-center relative' >
+      <div className='w-1/3 h-full flex justify-center'>
+      <div className='relative w-80 rounded-full'>
         <Image 
-        src={'/images/test.jpg'} alt='test' width={150} height={200}
-        className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+        src={'/images/test.jpg'} alt='test' fill
+        sizes="(min-width: 60em) 100vw,
+                (min-width: 28em) 100vw,
+                100vh"
+        className="object-cover"
         />
-        <h1 className='absolute left-[-37%] top-1/2 rotate-[-90deg] text-8xl'>
-          <span>H</span>
-          <span>E</span>
-          <span>L</span>
-          <span>L</span>
-          <span>O</span>
-          <span>.</span>
+        <h1 className='absolute w-full h-full spin-h1'>
+          {spinHello('Hello.')}
         </h1>
       </div>
+        </div>
       <div className='w-1/4	flex justify-center'>
         <p className='text-md'>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nisi ut perspiciatis natus, minus libero provident veritatis eius molestiae quo magnam tempora et quis alias enim accusamus mollitia fuga a!

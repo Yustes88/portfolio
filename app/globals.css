@@ -25,3 +25,21 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer utilities {
+  .spin-h1 {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+    animation: rotateText 10s linear infinite;
+  }
+
+  @keyframes rotateText {
+    0%{
+      transform: rotate(360deg)
+    }
+    100%{
+      transform: rotate(0deg)
+    }
+  }
+}
