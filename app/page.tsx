@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <>
-      <header className='text-white flex justify-center'>
+      <header>
         <Header/>
       </header>
 

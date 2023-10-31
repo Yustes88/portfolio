@@ -4,14 +4,14 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 54, 53, 61;
+    --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
@@ -24,22 +24,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .spin-h1 {
-    position: absolute;
-    left: 50%;
-    transform-origin: 0 100px;
-    animation: rotateText 10s linear infinite;
-  }
-
-  @keyframes rotateText {
-    0%{
-      transform: rotate(360deg)
-    }
-    100%{
-      transform: rotate(0deg)
-    }
-  }
 }
