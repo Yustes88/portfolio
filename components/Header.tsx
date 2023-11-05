@@ -1,4 +1,4 @@
-import Image from "next/image";
+import {TbBulb} from 'react-icons/tb'
 
 export default function Header() {
   return (
@@ -10,18 +10,15 @@ export default function Header() {
               <div className="max-w-xl">
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <div className="inline-flex space-x-6">
-                    <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-md font-semibold leading-6 text-indigo-600 ring-1 ring-inset animate-pulse ring-indigo-600/10">
-                      In active search
-                    </span>
-                    <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                      <span>for a developer position</span>
+                    <span className="bulb rounded-full bg-black px-3 py-1 text-md font-semibold leading-6 text-amber-300 ring-1 ring-inset ring-amber-300/10">
+                      <TbBulb size={34}/>
                     </span>
                   </div>
                 </div>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                   Frontend developer
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
+                <p className="mt-6 text-lg leading-8 text-gray-400">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                   amet fugiat veniam occaecat fugiat aliqua.
                 </p>

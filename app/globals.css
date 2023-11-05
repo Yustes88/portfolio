@@ -28,6 +28,11 @@ body {
 
 
 @layer components {
+  .bulb {
+    opacity: 0;
+    animation: flickerI 3s linear 1s both;
+  }
+
   .test {
     --b: .2em; /* border width */
     --c: 10em; /* corner size */
