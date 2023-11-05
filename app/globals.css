@@ -30,7 +30,7 @@ body {
 @layer components {
   .bulb {
     opacity: 0;
-    animation: flickerI 3s linear 1s both;
+    animation: flickerI 3s linear 1s both, pulse 2s linear 4s infinite;
   }
 
   .test {
@@ -102,6 +102,18 @@ body {
       opacity: 0.4;
     }
     90% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
       opacity: 0.5;
     }
     100% {
