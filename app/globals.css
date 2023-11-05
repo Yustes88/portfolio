@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -24,4 +24,100 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+
+@layer components {
+  .bulb {
+    opacity: 0;
+    animation: flickerI 3s linear 1s both, pulse 2s linear 4s infinite;
+  }
+
+  .test {
+    --b: .2em; /* border width */
+    --c: 10em; /* corner size */
+    --r: 2em; /* corner rounding */
+    position: relative;
+    margin: 1em auto;
+    border: solid var(--b) transparent;
+    padding: 1em;
+    max-width: 23em;
+    /* font: 1.25em ubuntu, sans-serif; */
+    
+    &::before {
+      position: absolute;
+      z-index: -1;
+      inset: calc(5 * var(--b));
+      border: inherit;
+      border-radius: var(--r);
+      background: linear-gradient(blue, deeppink, purple) border-box;
+      --corner: 
+      conic-gradient(from -90deg at var(--c), red 25%, #0000 0) 
+      0 0/ calc(100% - var(--c))  calc(1000% - var(--c)) border-box;
+      --inner: conic-gradient(red 0 0) padding-box;
+      -webkit-mask: var(--corner), var(--inner);
+      -webkit-mask-composite: source-out;
+      mask: var(--corner) subtract, var(--inner);
+      content: '';
+      opacity: 0;
+      animation: flickerI 3s linear 1s both;
+    }
+  }
+
+  @keyframes flickerI {
+    0% {
+      opacity: 0.1;
+    }
+    5% {
+      opacity: 0.5;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    15% {
+      opacity: 1.2;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    30% {
+      opacity: 1;
+    }
+    35% {
+      opacity: 0.1;
+    }
+    40% {
+      opacity: 0.25;
+    }
+    45% {
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.85;
+    }
+    80% {
+      opacity: 0.4;
+    }
+    90% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1.2;
+    }
+  }
 }
