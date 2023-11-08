@@ -1,10 +1,12 @@
 import Contact from '@/components/Contact'
 import Header from '@/components/Header'
+import Nav from '@/components/Nav'
 import ProjectsList from '@/components/ProjectsList'
 
 export default function Home() {
   return (
     <>
+      <Nav/>
       <header>
         <Header/>
       </header>
