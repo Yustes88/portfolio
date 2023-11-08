@@ -64,6 +64,25 @@ body {
     }
   }
 
+  
+  .overlay { 
+    position: absolute; 
+    transition: all 0.4s ease; 
+    opacity: 0; 
+    background-color: rgba(0,0,0); 
+} 
+  
+.container:hover .overlay { 
+    opacity: 0.8; 
+  } 
+  
+  .overlay-fade { 
+    height: 100%; 
+    width: 100%; 
+    top: 0; 
+    background-color: rgba(0,0,0); 
+} 
+
   @keyframes flickerI {
     0% {
       opacity: 0;

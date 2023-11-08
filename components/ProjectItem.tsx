@@ -1,5 +1,10 @@
-import { Project } from "@/types/types"
 import Image from "next/image"
+
+import {FaExternalLinkAlt} from 'react-icons/fa'
+
+import { Project } from "@/types/types"
+
+
 
 //TODO: fix types
 type ProjectItemProps = {
@@ -42,10 +47,16 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
     </div>
 
     {/* Project image */}
-    <a href="">
+    <a href={data.data.href} className="container relative">
     <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
       <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
         <Image src={data.data.imageSrc} alt={data.data.imageAlt} width={400} height={400} className=" w-full object-cover" />
+      </div>
+    </div>
+    <div className="overlay overlay-fade">
+      <div className="flex justify-center gap-x-2 h-full items-center text-white bg-black">
+        <div className="bg-black">Go to project</div>
+        <FaExternalLinkAlt/>
       </div>
     </div>
     </a>

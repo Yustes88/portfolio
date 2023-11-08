@@ -7,7 +7,7 @@ import ProjectItem from './ProjectItem'
 const projects = [
     {
     name: 'Spotify Clone',
-    href: '#',
+    href: 'https://spotify-clone-znti.vercel.app/',
     price: '$220',
     description:
       "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
@@ -17,7 +17,7 @@ const projects = [
   },     
   {
     name: 'Dashboard',
-    href: '#',
+    href: 'https://blog-steel-alpha-98.vercel.app/',
     price: '$220',
     description:
       "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
