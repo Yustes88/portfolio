@@ -10,7 +10,7 @@ export default function Header() {
               <div className="max-w-xl">
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <div className="inline-flex space-x-6">
-                    <span className="bulb rounded-full bg-black px-3 py-1 text-md font-semibold leading-6 text-amber-300 ring-1 ring-inset ring-amber-300/10">
+                    <span className="bulb rounded-full bg-transparent px-3 py-1 text-md font-semibold leading-6 text-amber-300 ring-1 ring-inset ring-amber-300/10">
                       <TbBulb size={34}/>
                     </span>
                   </div>
