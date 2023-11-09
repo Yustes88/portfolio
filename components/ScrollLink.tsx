@@ -1,5 +1,5 @@
 import Link, { LinkProps } from "next/link";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 
 type AnchorProps = Omit<
@@ -16,11 +16,14 @@ const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
     
     const targetId = e.currentTarget.href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
+    const  y = elem?.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
+      top: y,
       behavior: "smooth",
     });
   };
+
+
   return (
     <Link {...props} onClick={handleScroll}>
       {children}
