@@ -87,6 +87,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    animation: flickerI 1s linear both;
   }
 
   @keyframes flickerI {
@@ -145,4 +146,5 @@ body {
       opacity: 1;
     }
   }
+  
 }

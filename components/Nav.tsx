@@ -32,7 +32,7 @@ export default function Nav() {
   };
 
   return (
-    <header className={`bg-black ${stickyClass}`}>
+    <header className={`bg-black ${stickyClass} transition`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button
