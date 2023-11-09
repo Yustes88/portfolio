@@ -5,6 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
 import Link from 'next/link'
+import ScrollLink from './ScrollLink'
 
 const navigation = [
   { name: 'About', href: '#header' },
@@ -47,9 +48,9 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
               {item.name}
-            </Link>
+            </ScrollLink>
           ))}
         </div>
       </nav>
