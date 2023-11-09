@@ -35,7 +35,7 @@ const projects = [
 export default function ProjectsList() {
 
   return (
-    <div className="text-white">
+    <div className="text-white" id='projects'>
      
       <div>
         <main className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">

@@ -4,17 +4,18 @@ import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
+import Link from 'next/link'
 
 const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'Projects', href: '#' },
-  { name: 'Contac', href: '#' },
+  { name: 'About', href: '#header' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const [stickyClass, setStickyClass] = useState('relative');
+  const [stickyClass, setStickyClass] = useState('');
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -27,12 +28,12 @@ export default function Nav() {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 500 ? setStickyClass('sticky') : setStickyClass('relative');
+      windowHeight > 500 ? setStickyClass('sticky') : setStickyClass('');
     }
   };
 
   return (
-    <header className={`bg-black ${stickyClass} transition`}>
+    <div className={`bg-black ${stickyClass} transition`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button
@@ -46,9 +47,9 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+            <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>
@@ -69,13 +70,13 @@ export default function Nav() {
             <div className="-my-6 divide-y divide-gray-500/25">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               
@@ -83,6 +84,6 @@ export default function Nav() {
           </div>
         </Dialog.Panel>
       </Dialog>
-    </header>
+    </div>
   )
 }
