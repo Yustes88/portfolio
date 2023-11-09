@@ -83,6 +83,12 @@ body {
     background-color: rgba(0,0,0); 
 } 
 
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
   @keyframes flickerI {
     0% {
       opacity: 0;
