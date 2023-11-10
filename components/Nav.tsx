@@ -34,7 +34,7 @@ export default function Nav() {
   };
 
   return (
-    <div className={`bg-black ${stickyClass} transition`}>
+    <div className={`bg-black ${stickyClass} fill-nav`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button
@@ -48,7 +48,7 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6">
               {item.name}
             </ScrollLink>
           ))}
