@@ -48,7 +48,7 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6">
+            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6 link-underline">
               {item.name}
             </ScrollLink>
           ))}
