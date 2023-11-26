@@ -70,18 +70,61 @@ body {
     transition: all 0.4s ease; 
     opacity: 0; 
     background-color: rgba(0,0,0); 
-} 
-  
-.container:hover .overlay { 
-    opacity: 0.8; 
   } 
   
-  .overlay-fade { 
-    height: 100%; 
-    width: 100%; 
-    top: 0; 
-    background-color: rgba(0,0,0); 
+.container:hover .overlay { 
+  opacity: 0.8; 
 } 
+
+.overlay-fade { 
+  height: 100%; 
+  width: 100%; 
+  top: 0; 
+  background-color: rgba(0,0,0); 
+} 
+
+.fill-nav {
+  background: linear-gradient(to right, black 50%, white 50%) left;
+  background-size: 200%;
+  transition: 1s ease-out;
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.link-underline:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  color: black;
+  background-position: right;
+  animation: flickerI 1s linear both;
+}
+
+
+/* .button:hover {
+} */
 
   @keyframes flickerI {
     0% {
@@ -139,4 +182,5 @@ body {
       opacity: 1;
     }
   }
+  
 }
