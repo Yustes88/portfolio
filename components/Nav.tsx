@@ -17,6 +17,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const [stickyClass, setStickyClass] = useState('');
+  const [isActiveClass, setIsActiveClass] = useState('')
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -48,7 +49,7 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <ScrollLink key={item.name} href={item.href} className="text-sm font-semibold leading-6 link-underline">
+            <ScrollLink key={item.name} link={item.href}>
               {item.name}
             </ScrollLink>
           ))}

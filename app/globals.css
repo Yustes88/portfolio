@@ -113,6 +113,10 @@ body {
   transform: scaleX(1);
 }
 
+.active {
+  background-color: green;
+}
+
 .sticky {
   position: sticky;
   top: 0;
