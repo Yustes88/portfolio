@@ -1,3 +1,4 @@
+import useDebounce from "@/hooks/useDebounce";
 import Link, { LinkProps } from "next/link";
 import { PropsWithChildren, useEffect, useState } from "react";
 
@@ -10,8 +11,10 @@ type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
 
 
 const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
+  
   const sections = document.querySelectorAll('[id]');
-  window.addEventListener("scroll", navHighlighter);
+  const debouncedNavHighlighter = useDebounce(navHighlighter, 25);
+  window.addEventListener("scroll", debouncedNavHighlighter);
   
   function navHighlighter() {
     let scrollY = window.scrollY;
