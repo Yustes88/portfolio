@@ -14,7 +14,6 @@ const ScrollLink = ({ children, link, ...props }: ScrollLinkProps) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
 
-  
     const targetId = e.currentTarget.href.replace(/.*\#/, "");
     console.log(targetId, 'here', link)
     const elem = document.getElementById(targetId);
@@ -24,12 +23,15 @@ const ScrollLink = ({ children, link, ...props }: ScrollLinkProps) => {
       behavior: "smooth",
     });
 
-    (targetId === link.replace(/.*\#/, "")) ? setIsActive('active') : '';
+    const links = document.querySelectorAll('a.link-underline');
+    for (const link of links) {
+      const linkId = link.href.replace(/.*\#/, "");
+      const isLinkActive = linkId === targetId;
+      link.classList.toggle('active', isLinkActive);
+    }
+
   };
 
-  useEffect(() => {
-    setIsActive('')
-  }, [])
 
 
   return (

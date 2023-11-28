@@ -17,7 +17,6 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const [stickyClass, setStickyClass] = useState('');
-  const [isActiveClass, setIsActiveClass] = useState('')
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
