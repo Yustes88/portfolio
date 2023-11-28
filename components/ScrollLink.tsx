@@ -9,13 +9,37 @@ type AnchorProps = Omit<
 type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
 
 
-const ScrollLink = ({ children, link, ...props }: ScrollLinkProps) => {
-  const [isActive, setIsActive] = useState('')
+const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
+  const sections = document.querySelectorAll('[id]');
+  window.addEventListener("scroll", navHighlighter);
+  
+  function navHighlighter() {
+    let scrollY = window.scrollY;
+  
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 50;
+      const sectionId = current.id;
+  
+      if ((sectionId !== "headlessui-portal-root") &&
+        scrollY > sectionTop &&
+        scrollY <= sectionTop + sectionHeight) {
+        // Handle highlighting logic for the matching section
+        const links = document.querySelectorAll('a.link-underline');
+        for (const link of links) {
+          const linkId = link.href.replace(/.*\#/, "");
+          const isLinkActive = linkId === sectionId;
+          link.classList.toggle('active', isLinkActive);
+        }
+      }
+    });
+  }
+
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
 
     const targetId = e.currentTarget.href.replace(/.*\#/, "");
-    console.log(targetId, 'here', link)
     const elem = document.getElementById(targetId);
     const  y = elem?.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
@@ -34,8 +58,10 @@ const ScrollLink = ({ children, link, ...props }: ScrollLinkProps) => {
 
 
 
+
+
   return (
-    <Link {...props} href={link} onClick={handleScroll} className={`text-sm font-semibold leading-6 link-underline ${isActive}`}>
+    <Link {...props} onClick={handleScroll} className={`text-sm font-semibold leading-6 link-underline`}>
       {children}
     </Link>
   );
