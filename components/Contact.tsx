@@ -25,7 +25,7 @@ export default function Contact() {
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-                Would you like to leave some feedback or are there any questions?
+                Please contact me directly at <a href='mailto:iuliiaobr.io@gmail.com' className='underline'>iuliiaobr.io@gmail.com</a> or through this form
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
               <div className="flex gap-x-4">
@@ -65,6 +65,7 @@ export default function Contact() {
                     type="text"
                     name="first-name"
                     id="first-name"
+                    placeholder='Your name'
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
@@ -77,8 +78,10 @@ export default function Contact() {
                 <div className="mt-2.5">
                   <input
                     type="email"
+                    required
                     name="email"
                     id="email"
+                    placeholder='Your email'
                     autoComplete="email"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
@@ -93,6 +96,9 @@ export default function Contact() {
                   <textarea
                     name="message"
                     id="message"
+                    placeholder='Your message'
+                    required
+                    maxLength={500}
                     rows={4}
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                     defaultValue={''}
