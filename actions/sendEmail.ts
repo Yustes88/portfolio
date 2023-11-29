@@ -9,4 +9,12 @@ export const sendEmail = async(formData: FormData) => {
     console.log(formData.get('message'))
     console.log(formData.get('first-name'))
     console.log(formData.get('email'))
+
+    console.log('email sent')
+    resend.emails.send({
+        from: 'onboarding@resend.dev',
+        to: 'iuliiaobr.io@gmail.com',
+        subject: 'Message from portfolio contact form',
+        text: 'Hello world!'
+    })
   }
