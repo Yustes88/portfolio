@@ -4,6 +4,7 @@ import Nav from '@/components/Nav'
 import ProjectsList from '@/components/ProjectsList'
 
 export default function Home() {
+
   return (
     <>
       <Nav/>
