@@ -5,16 +5,22 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendEmail = async(formData: FormData) => {
-    console.log('Running on server')
-    console.log(formData.get('message'))
-    console.log(formData.get('first-name'))
-    console.log(formData.get('email'))
+    const senderEmail = formData.get('email')
+    const message = formData.get('message')
 
-    console.log('email sent')
+    if(!message || typeof message !== 'string') {
+        return {
+            error: 'Invalid message'
+        }
+    }
+
+    
+
     resend.emails.send({
         from: 'onboarding@resend.dev',
         to: 'iuliiaobr.io@gmail.com',
         subject: 'Message from portfolio contact form',
-        text: 'Hello world!'
+        reply_to: senderEmail,
+        text: message,
     })
   }
