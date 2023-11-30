@@ -2,6 +2,7 @@ import Contact from '@/components/Contact'
 import Header from '@/components/Header'
 import Nav from '@/components/Nav'
 import ProjectsList from '@/components/ProjectsList'
+import { Toaster } from 'react-hot-toast'
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
         <div>
           <ProjectsList/>
           <Contact/>
+          <Toaster position='top-right'/>
         </div>
       </main>
 
