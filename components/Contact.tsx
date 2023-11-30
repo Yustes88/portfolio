@@ -4,6 +4,7 @@ import { sendEmail } from '@/actions/sendEmail'
 import {BsTelephone} from 'react-icons/bs'
 import {FaRegEnvelope} from 'react-icons/fa'
 import SubmitButton from './SubmitButton'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
 
@@ -44,8 +45,13 @@ export default function Contact() {
         </div>
         <form method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
-          await sendEmail(formData)
-          
+          const {data, error} = await sendEmail(formData)
+
+          if(error) {
+            toast.error(error)
+            return;
+          }
+          toast.success('Your message was successfully sent!')
         }}>
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
