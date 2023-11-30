@@ -3,10 +3,9 @@
 import { sendEmail } from '@/actions/sendEmail'
 import {BsTelephone} from 'react-icons/bs'
 import {FaRegEnvelope} from 'react-icons/fa'
+import SubmitButton from './SubmitButton'
 
 export default function Contact() {
-  
-
 
   return (
     <div className="relative isolate bg-gray-900" id='contact'>
@@ -102,12 +101,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="mt-8 flex justify-end">
-              <button
-                type="submit"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Submit
-              </button>
+              <SubmitButton/>
             </div>
           </div>
         </form>
