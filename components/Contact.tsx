@@ -5,8 +5,10 @@ import {BsTelephone} from 'react-icons/bs'
 import {FaRegEnvelope} from 'react-icons/fa'
 import SubmitButton from './SubmitButton'
 import toast from 'react-hot-toast'
+import { useRef } from 'react'
 
 export default function Contact() {
+  const formRef: React.Ref<HTMLFormElement> = useRef<HTMLFormElement>(null);
 
   return (
     <div className="relative isolate bg-gray-900" id='contact'>
@@ -43,7 +45,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+        <form method="POST" ref={formRef} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
           const {data, error} = await sendEmail(formData)
 
@@ -52,6 +54,9 @@ export default function Contact() {
             return;
           }
           toast.success('Your message was successfully sent!')
+          if (formRef.current) {
+            formRef.current.reset();
+          }
         }}>
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
