@@ -3,7 +3,7 @@ import { skillsData } from "@/data/data";
 
 export default function Skills() {
     return(
-        <section className="mb-28 scroll-mt-28 text-center sm:mb-40">
+        <div className="mb-28 scroll-mt-28 text-center sm:mb-40" id="skills">
             <h2 className="text-3xl font-medium capitalize mb-8 text-center">
                 My skills
             </h2>
@@ -12,6 +12,6 @@ export default function Skills() {
                     <li key={index} className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80">{skill}</li>
                 ))}
             </ul>
-        </section>
+        </div>
     )
 }
