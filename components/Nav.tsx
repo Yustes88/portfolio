@@ -6,12 +6,8 @@ import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
 import Link from 'next/link'
 import ScrollLink from './ScrollLink'
+import { navigation } from '@/data/data'
 
-const navigation = [
-  { name: 'About', href: '#header' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
