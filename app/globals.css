@@ -93,6 +93,10 @@ body {
   text-decoration: none;
 }
 
+.link-underline:hover {
+  background-color: rgba(251, 242, 242, 0.422)
+}
+
 .link-underline::before {
   content: '';
   position: absolute;

@@ -5,14 +5,20 @@ import { Dialog } from '@headlessui/react'
 import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
 import Link from 'next/link'
-import ScrollLink from './ScrollLink'
 import { navigation } from '@/data/data'
+
+import { motion } from "framer-motion";
+import clsx from 'clsx'
+import { useActiveSectionContext } from '@/context/active-section-context'
+
 
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   const [stickyClass, setStickyClass] = useState('');
+
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+  useActiveSectionContext();
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -30,7 +36,7 @@ export default function Nav() {
   };
 
   return (
-    <div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
+    <motion.div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button
@@ -43,10 +49,42 @@ export default function Nav() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <ScrollLink key={item.name} href={item.href}>
-              {item.name}
-            </ScrollLink>
+          {navigation.map((link, i) => (
+                        <motion.li
+                        className="h-3/4 flex items-center justify-center relative"
+                        key={i}
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                      >
+                        <Link
+                          className={clsx(
+                            "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                            {
+                              "text-gray-950 dark:text-gray-200":
+                                activeSection === link.name,
+                            }
+                          )}
+                          href={link.href}
+                          onClick={() => {
+                            setActiveSection(link.name);
+                            setTimeOfLastClick(Date.now());
+                          }}
+                        >
+                          {link.name}
+          
+                          {link.name === activeSection && (
+                            <motion.span
+                              className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                              layoutId="activeSection"
+                              transition={{
+                                type: "spring",
+                                stiffness: 380,
+                                damping: 30,
+                              }}
+                            ></motion.span>
+                          )}
+                        </Link>
+                      </motion.li>
           ))}
         </div>
       </nav>
@@ -81,6 +119,6 @@ export default function Nav() {
           </div>
         </Dialog.Panel>
       </Dialog>
-    </div>
+    </motion.div>
   )
 }
