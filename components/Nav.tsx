@@ -30,7 +30,7 @@ export default function Nav() {
   };
 
   return (
-    <div className={`bg-black ${stickyClass} fill-nav`}>
+    <div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button

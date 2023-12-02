@@ -84,9 +84,8 @@ body {
 } 
 
 .fill-nav {
-  background: linear-gradient(to right, black 50%, white 50%) left;
+  background: linear-gradient(to right, black 50%, #ffffff5d 50%) left;
   background-size: 200%;
-  transition: 1s ease-out;
 }
 
 .link-underline {
