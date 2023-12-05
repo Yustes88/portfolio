@@ -16,31 +16,15 @@ import { useSectionInView } from '@/hooks/useSectionInView'
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [stickyClass, setStickyClass] = useState('');
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
   useActiveSectionContext();
-  const { ref } = useSectionInView("Home", 0.5);
 
 
-  useEffect(() => {
-    window.addEventListener('scroll', stickNavbar);
-
-    return () => {
-      window.removeEventListener('scroll', stickNavbar);
-    };
-  }, []);
-
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 500 ? setStickyClass('sticky') : setStickyClass('');
-    }
-  };
 
   return (
     <>
-    <motion.div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
+    <motion.div className={`fill-nav fixed z-20 bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
           <button
@@ -124,7 +108,6 @@ export default function Nav() {
         </Dialog.Panel>
       </Dialog>
     </motion.div>
-    <div id='header' ref={ref}></div>
   </>
   )
 }

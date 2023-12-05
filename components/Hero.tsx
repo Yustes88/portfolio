@@ -1,8 +1,16 @@
+'use client'
+
 import {TbBulb} from 'react-icons/tb'
+import Nav from './Nav'
+import { useSectionInView } from '@/hooks/useSectionInView';
 
 export default function Hero() {
+  const { ref } = useSectionInView("About", 0.5);
+
   return (
-    <header className="max-w-8xl h-[87vh] m-auto test">
+    <>
+    <header className="max-w-8xl relative h-[100vh] m-auto test" id='header' ref={ref}>
+    <Nav/>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
           <div className="px-6 lg:px-0 lg:pt-4">
@@ -31,6 +39,7 @@ export default function Hero() {
         {/* <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" /> */}
       </div>
     </header>
+    </>
   )
 }
 

@@ -121,11 +121,9 @@ body {
 }
 
 .sticky {
-  position: sticky;
   top: 0;
   z-index: 10;
   color: black;
-  background-position: right;
   animation: flickerI 1s linear both;
 }
 

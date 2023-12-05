@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <ActiveSectionContextProvider>
-        <Nav/>
-        <div>
+        {/* <Nav/> */}
+        <div className='relative'>
           {children}
         </div>
       </ActiveSectionContextProvider>
