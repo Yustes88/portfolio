@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import ProjectItem from './ProjectItem'
 import { projects } from '@/data/data'
+import { useSectionInView } from '@/hooks/useSectionInView'
 
   
 //TODO: fix types
@@ -11,9 +12,11 @@ import { projects } from '@/data/data'
   }
 
 export default function ProjectsList() {
+  const { ref } = useSectionInView("Projects", 0.5);
+
 
   return (
-    <div className="text-white" id='projects'>
+    <div className="text-white" id='projects' ref={ref}>
      
       <div>
         <main className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">

@@ -10,6 +10,7 @@ import { navigation } from '@/data/data'
 import { motion } from "framer-motion";
 import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context'
+import { useSectionInView } from '@/hooks/useSectionInView'
 
 
 
@@ -19,6 +20,8 @@ export default function Nav() {
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
   useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
+
 
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
@@ -37,7 +40,6 @@ export default function Nav() {
 
   return (
     <>
-    <div id='header'></div>
     <motion.div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
@@ -122,6 +124,7 @@ export default function Nav() {
         </Dialog.Panel>
       </Dialog>
     </motion.div>
+    <div id='header' ref={ref}></div>
   </>
   )
 }
