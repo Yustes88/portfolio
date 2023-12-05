@@ -40,8 +40,8 @@ body {
     position: relative;
     margin: 1em auto;
     border: solid var(--b) transparent;
-    padding: 1em;
-    max-width: 23em;
+    padding: 1em 15rem 1rem 15rem;
+    max-width: 80%;
     /* font: 1.25em ubuntu, sans-serif; */
     
     &::before {

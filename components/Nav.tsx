@@ -36,6 +36,8 @@ export default function Nav() {
   };
 
   return (
+    <>
+    <div id='header'></div>
     <motion.div className={`${stickyClass} fill-nav bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden">
@@ -74,8 +76,8 @@ export default function Nav() {
           
                           {link.name === activeSection && (
                             <motion.span
-                              className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                              layoutId="activeSection"
+                            className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                            layoutId="activeSection"
                               transition={{
                                 type: "spring",
                                 stiffness: 380,
@@ -120,5 +122,6 @@ export default function Nav() {
         </Dialog.Panel>
       </Dialog>
     </motion.div>
+  </>
   )
 }

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import ActiveSectionContextProvider from '@/context/active-section-context'
+import { useSectionInView } from '@/hooks/useSectionInView'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +17,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
       <ActiveSectionContextProvider>
-        <div id='header'></div>
         <Nav/>
         <div>
           {children}

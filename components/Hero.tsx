@@ -1,8 +1,8 @@
 import {TbBulb} from 'react-icons/tb'
 
-export default function Header() {
+export default function Hero() {
   return (
-    <header className="max-w-7xl h-[90vh] m-auto test">
+    <header className="max-w-8xl h-[87vh] m-auto test">
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
           <div className="px-6 lg:px-0 lg:pt-4">
