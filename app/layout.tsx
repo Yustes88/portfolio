@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Nav from '@/components/Nav'
 import ActiveSectionContextProvider from '@/context/active-section-context'
-import { useSectionInView } from '@/hooks/useSectionInView'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,12 +17,10 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en">
+    <html lang="en" className='!scroll-smooth'>
       <body className={inter.className}>
       <ActiveSectionContextProvider>
-        <div >
           {children}
-        </div>
       </ActiveSectionContextProvider>
       </body>
     </html>
