@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <>
-    <header className="max-w-8xl relative h-[100vh] m-auto test" id='header' ref={ref}>
+    <header className="max-w-8xl h-[100vh] m-auto test" id='header' ref={ref}>
     <Nav/>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">

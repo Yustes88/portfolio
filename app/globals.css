@@ -83,11 +83,6 @@ body {
   background-color: rgba(0,0,0); 
 } 
 
-.fill-nav {
-  background: linear-gradient(to right, black 50%, #ffffff5d 50%) left;
-  background-size: 200%;
-}
-
 .link-underline {
   position: relative;
   text-decoration: none;
@@ -120,12 +115,6 @@ body {
   background-color: green;
 }
 
-.sticky {
-  top: 0;
-  z-index: 10;
-  color: black;
-  animation: flickerI 1s linear both;
-}
 
 
 /* .button:hover {
