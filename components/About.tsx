@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <>
-    <section className="max-w-8xl h-[100vh] m-auto test" id='about' ref={ref}>
+    <section className="max-w-8xl h-[100vh] m-auto glowing" id='about' ref={ref}>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
           <div className="px-6 lg:px-0 lg:pt-4">
@@ -22,8 +22,8 @@ export default function About() {
                     </span>
                   </div>
                 </div>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                  Frontend developer
+                <h1 className="glowing-txt mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                  Fron<span className='faulty-letter'>tend</span> developer
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-400">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
