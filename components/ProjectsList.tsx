@@ -4,6 +4,7 @@ import Image from 'next/image'
 import ProjectItem from './ProjectItem'
 import { projects } from '@/data/data'
 import { useSectionInView } from '@/hooks/useSectionInView'
+import { motion } from 'framer-motion'
 
   
 //TODO: fix types
@@ -16,7 +17,18 @@ export default function ProjectsList() {
 
 
   return (
-    <section className="text-white" id='projects' ref={ref}>
+    <motion.section
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 1,
+      ease: 'easeIn'
+    }}
+     className="text-white" id='projects' ref={ref}>
         <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
           <div className="border-b border-gray-200 pb-10 pt-24">
             <h1 className="text-4xl font-bold tracking-tight text-white">Have a look at my projects</h1>
@@ -28,6 +40,6 @@ export default function ProjectsList() {
                 <ProjectItem key={project.name} data={project}/>
             ))}
         </div>
-    </section>
+    </motion.section>
   )
 }

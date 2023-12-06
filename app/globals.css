@@ -24,8 +24,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    animation: flickerI 3s linear 1s both;
-
 }
 
 
@@ -44,6 +42,8 @@ body {
     border: solid var(--b) transparent;
     padding: 1em 15rem 1rem 15rem;
     max-width: 80%;
+    animation: flickerI 3s linear 1s both;
+
     /* font: 1.25em ubuntu, sans-serif; */
     
     &::before {

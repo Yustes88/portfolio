@@ -22,7 +22,18 @@ export default function Skills() {
     const { ref } = useSectionInView("Skills", 0.5);
 
     return(
-        <section className="mb-28 scroll-mt-28 text-center sm:mb-40" id="skills" ref={ref}>
+        <motion.section
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: 'easeIn'
+        }}
+        className="mb-28 mt-16 text-center sm:mb-40" id="skills" ref={ref}>
             <h2 className="text-3xl font-medium capitalize mb-8 text-center">
                 My skills
             </h2>
@@ -34,12 +45,15 @@ export default function Skills() {
                     variants={fadeInAnimationVariants}
                     initial="initial"
                     whileInView="animate"
+                    viewport={{
+                      once: true,
+                    }}
                     custom={index}
                   >
                     {skill}
                   </motion.li>
                 ))}
             </ul>
-        </section>
+        </motion.section>
     )
 }
