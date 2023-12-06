@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <>
-    <section className="max-w-8xl h-[100vh] m-auto glowing" id='about' ref={ref}>
+    <section className="max-w-8xl h-[100vh] m-auto" id='about' ref={ref}>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
           <div className="px-6 lg:px-0 lg:pt-4">

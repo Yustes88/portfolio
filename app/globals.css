@@ -34,39 +34,6 @@ body {
     animation: flickerI 3s linear 1s both, pulse 2s linear 4s infinite;
   }
 
-  .glowing {
-    --b: .2em; /* border width */
-    --c: 10em; /* corner size */
-    --r: 2em; /* corner rounding */
-    position: relative;
-    margin: 1em auto;
-    border: solid var(--b) transparent;
-    padding: 1em 15rem 1rem 15rem;
-    max-width: 80%;
-    animation: border-flicker 2s linear 3;
-
-    /* font: 1.25em ubuntu, sans-serif; */
-    
-    &::before {
-      position: absolute;
-      z-index: -1;
-      inset: calc(5 * var(--b));
-      border: inherit;
-      border-radius: var(--r);
-      background: linear-gradient(var(--glow-color), var(--glow-color)) border-box;
-      --corner: 
-      conic-gradient(from -90deg at var(--c), var(--glow-color) 25%, #0000 0) 
-      0 0/ calc(100% - var(--c))  calc(1000% - var(--c)) border-box;
-      --inner: conic-gradient(var(--glow-color) 0 0) padding-box;
-      -webkit-mask: var(--corner), var(--inner);
-      -webkit-mask-composite: source-out;
-      mask: var(--corner) subtract, var(--inner);
-      content: '';
-      opacity: 1;
-      animation: border-flicker 2s linear 3;
-    }
-  }
-  
   .glowing-txt {
     margin-right: -0.8em;
     -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
@@ -164,7 +131,7 @@ body {
     }
   }
   
-  @keyframes border-flicker {
+  /* @keyframes border-flicker {
     0% {
       opacity: 0.1;
     }
@@ -184,7 +151,7 @@ body {
     100% {
       opacity: 1;
     }
-  }
+  } */
   
   @media only screen and (max-width: 600px) {
     .glowing{
