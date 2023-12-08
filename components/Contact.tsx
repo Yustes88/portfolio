@@ -30,7 +30,7 @@ export default function Contact() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
-            <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
+            <h2 className="text-4xl heading font-medium capitalize mb-8">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
                 Please contact me directly at <a href='mailto:iuliiaobr.io@gmail.com' className='underline'>iuliiaobr.io@gmail.com</a> or through this form
             </p>

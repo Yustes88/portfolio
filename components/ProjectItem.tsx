@@ -29,7 +29,7 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
     {/* Project details */}
     <div className="lg:max-w-lg">
       <div className="mt-4">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{data.data.name}</h1>
+        <h3 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{data.data.name}</h3>
       </div>
 
       <section aria-labelledby="information-heading" className="mt-4">
