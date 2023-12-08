@@ -67,6 +67,12 @@ body {
   background-color: rgba(0,0,0); 
 } 
 
+.icon-shadow {
+  filter: blur(5px);
+  fill: linear-gradient(to right, #fff, transparent 80%);
+  color: #fff;
+}
+
 .heading {
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
 }
