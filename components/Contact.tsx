@@ -6,12 +6,27 @@ import {FaRegEnvelope} from 'react-icons/fa'
 import SubmitButton from './SubmitButton'
 import toast from 'react-hot-toast'
 import { useRef } from 'react'
+import { useSectionInView } from '@/hooks/useSectionInView'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   const formRef: React.Ref<HTMLFormElement> = useRef<HTMLFormElement>(null);
+  const { ref } = useSectionInView("Contact", 0.5);
+
 
   return (
-    <div className="relative isolate bg-gray-900" id='contact'>
+    <motion.section  
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 2,
+      ease: 'easeIn'
+    }} 
+    className="relative isolate bg-gray-900" id='contact' ref={ref}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
@@ -117,6 +132,6 @@ export default function Contact() {
           </div>
         </form>
       </div>
-    </div>
+    </motion.section>
   )
 }

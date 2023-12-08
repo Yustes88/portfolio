@@ -1,17 +1,59 @@
-import { skillsData } from "@/data/data";
+'use client' 
 
+import { skillsData } from "@/data/data";
+import { useSectionInView } from "@/hooks/useSectionInView";
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+      },
+    }),
+  };
 
 export default function Skills() {
+    const { ref } = useSectionInView("Skills", 0.5);
+
     return(
-        <div className="mb-28 scroll-mt-28 text-center sm:mb-40" id="skills">
+        <motion.section
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: 'easeIn'
+        }}
+        className="mb-28 mt-16 text-center sm:mb-40" id="skills" ref={ref}>
             <h2 className="text-3xl font-medium capitalize mb-8 text-center">
                 My skills
             </h2>
-            <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+            <ul className="grid grid-cols-5 gap-2 text-lg text-gray-800">
                 {skillsData.map((skill, index) => (
-                    <li key={index} className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80">{skill}</li>
+                    <motion.li
+                    className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+                    key={index}
+                    variants={fadeInAnimationVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                      once: true,
+                    }}
+                    custom={index}
+                  >
+                    {skill}
+                  </motion.li>
                 ))}
             </ul>
-        </div>
+        </motion.section>
     )
 }

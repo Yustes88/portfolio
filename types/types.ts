@@ -1,3 +1,5 @@
+import { navigation } from "@/data/data";
+
 export type Project = {
     name: string,
     href: string,
@@ -7,3 +9,5 @@ export type Project = {
     imageAlt: string,
     tools: string[],
 }
+
+export type SectionName = (typeof navigation)[number]["name"];

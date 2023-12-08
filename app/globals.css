@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 255, 255, 255;
+  --glow-color: hsl(186 100% 69%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,36 +34,131 @@ body {
     animation: flickerI 3s linear 1s both, pulse 2s linear 4s infinite;
   }
 
-  .test {
-    --b: .2em; /* border width */
-    --c: 10em; /* corner size */
-    --r: 2em; /* corner rounding */
-    position: relative;
-    margin: 1em auto;
-    border: solid var(--b) transparent;
-    padding: 1em;
-    max-width: 23em;
-    /* font: 1.25em ubuntu, sans-serif; */
-    
-    &::before {
-      position: absolute;
-      z-index: -1;
-      inset: calc(5 * var(--b));
-      border: inherit;
-      border-radius: var(--r);
-      background: linear-gradient(blue, deeppink, purple) border-box;
-      --corner: 
-      conic-gradient(from -90deg at var(--c), red 25%, #0000 0) 
-      0 0/ calc(100% - var(--c))  calc(1000% - var(--c)) border-box;
-      --inner: conic-gradient(red 0 0) padding-box;
-      -webkit-mask: var(--corner), var(--inner);
-      -webkit-mask-composite: source-out;
-      mask: var(--corner) subtract, var(--inner);
-      content: '';
-      opacity: 0;
-      animation: flickerI 3s linear 1s both;
+  .glowing-txt {
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear 2;
+  }
+  
+  .faulty-letter {
+    opacity: 1;
+    animation: faulty-flicker 2s linear 3;
+  }
+
+  
+  
+  @keyframes faulty-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 0.1;
+    }
+    4% {
+      opacity: 0.5;
+    }
+    19% {
+      opacity: 0.5;
+    }
+    21% {
+      opacity: 0.1;
+    }
+    23% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    83% {
+      opacity: 0.4;
+    }
+  
+    87% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
+  
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    8% {
+      opacity: 0.1;
+    }
+  
+    9% {
+      opacity: 1;
+    }
+  
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+  
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+  
+  /* @keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  } */
+  
+  @media only screen and (max-width: 600px) {
+    .glowing{
+      font-size: 1em;
+    }
+  }
+    
 
   
   .overlay { 
@@ -83,15 +179,13 @@ body {
   background-color: rgba(0,0,0); 
 } 
 
-.fill-nav {
-  background: linear-gradient(to right, black 50%, white 50%) left;
-  background-size: 200%;
-  transition: 1s ease-out;
-}
-
 .link-underline {
   position: relative;
   text-decoration: none;
+}
+
+.link-underline:hover {
+  background-color: rgba(251, 242, 242, 0.422)
 }
 
 .link-underline::before {
@@ -108,72 +202,6 @@ body {
   transition: transform .3s ease-in-out;
 }
 
-.link-underline:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
-.active {
-  background-color: green;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  color: black;
-  background-position: right;
-  animation: flickerI 1s linear both;
-}
-
-
-/* .button:hover {
-} */
-
-  @keyframes flickerI {
-    0% {
-      opacity: 0;
-    }
-    5% {
-      opacity: 0.5;
-    }
-    10% {
-      opacity: 0.6;
-    }
-    15% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0.5;
-    }
-    30% {
-      opacity: 1;
-    }
-    35% {
-      opacity: 0.1;
-    }
-    40% {
-      opacity: 0.25;
-    }
-    45% {
-      opacity: 0.5;
-    }
-    60% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 0.85;
-    }
-    80% {
-      opacity: 0.4;
-    }
-    90% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   @keyframes pulse {
     0% {

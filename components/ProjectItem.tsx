@@ -3,6 +3,7 @@ import Image from "next/image"
 import {FaExternalLinkAlt} from 'react-icons/fa'
 
 import { Project } from "@/types/types"
+import { motion } from "framer-motion";
 
 
 
@@ -14,7 +15,17 @@ type ProjectItemProps = {
 
 const ProjectItem:React.FC<ProjectItemProps> = (data) => {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+    <motion.div  
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 1,
+      ease: 'easeIn'
+    }} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
     {/* Project details */}
     <div className="lg:max-w-lg">
       <div className="mt-4">
@@ -63,7 +74,7 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
 
     {/* Project tools */}
 
-  </div>
+  </motion.div>
   )
 }
 

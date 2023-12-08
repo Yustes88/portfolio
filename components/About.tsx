@@ -1,8 +1,15 @@
-import {TbBulb} from 'react-icons/tb'
+'use client'
 
-export default function Header() {
+import {TbBulb} from 'react-icons/tb'
+import Nav from './Nav'
+import { useSectionInView } from '@/hooks/useSectionInView';
+
+export default function About() {
+  const { ref } = useSectionInView("About", 0.5);
+
   return (
-    <div className="max-w-7xl h-[90vh] m-auto test">
+    <>
+    <section className="max-w-8xl h-[100vh] m-auto" id='about' ref={ref}>
       <div className="relative isolate overflow-hidden">
         <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
           <div className="px-6 lg:px-0 lg:pt-4">
@@ -15,8 +22,8 @@ export default function Header() {
                     </span>
                   </div>
                 </div>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                  Frontend developer
+                <h1 className="glowing-txt mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                  Fron<span className='faulty-letter'>tend</span> developer
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-400">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
@@ -30,7 +37,8 @@ export default function Header() {
         </div>
         {/* <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" /> */}
       </div>
-    </div>
+    </section>
+    </>
   )
 }
 
