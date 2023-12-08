@@ -1,42 +1,111 @@
 'use client'
 
-import {TbBulb} from 'react-icons/tb'
-import Nav from './Nav'
 import { useSectionInView } from '@/hooks/useSectionInView';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { FaGithubSquare } from 'react-icons/fa';
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
+
+  function setActiveSection(arg0: string) {
+    throw new Error('Function not implemented.');
+  }
+
+  function setTimeOfLastClick(arg0: number) {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <>
-    <section className="max-w-8xl h-[100vh] m-auto" id='about' ref={ref}>
-      <div className="relative isolate overflow-hidden">
-        <div className="mx-auto max-w-full pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-1 lg:px-8 lg:pb-40">
-          <div className="px-6 lg:px-0 lg:pt-4">
-            <div className="mx-auto max-w-2xl">
-              <div className="max-w-xl">
-                <div className="mt-24 sm:mt-32 lg:mt-16">
-                  <div className="inline-flex space-x-6">
-                    <span className="bulb rounded-full bg-transparent px-3 py-1 text-md font-semibold leading-6 text-amber-300 ring-1 ring-inset ring-amber-300/10">
-                      <TbBulb size={34}/>
-                    </span>
-                  </div>
-                </div>
-                <h1 className="glowing-txt mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                  Fron<span className='faulty-letter'>tend</span> developer
-                </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
-                </p>
-              
-              </div>
-            </div>
-          </div>
-
+     <section
+      ref={ref}
+      id="about"
+      className="pt-32 max-w-[50rem] h-[100vh] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
+      <div className="flex items-center justify-center">
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 0.2,
+            }}
+          >
+            <Image
+              src="/images/pro.jpg"
+              alt="Ricardo portrait"
+              width="192"
+              height="192"
+              quality="95"
+              priority={true}
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+            />
+          </motion.div>
         </div>
-        {/* <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" /> */}
       </div>
+
+      <motion.h1
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <span className="font-bold">Hey, I&apos;m Yulya.</span> I&apos;m a{" "}
+        <span className="glowing-txt">front<span className='faulty-letter'>end</span> developer.</span>
+        <p>I enjoy
+        building <span className="italic">websites</span>. My focus is{" "}
+        <span className="underline">React (Next.js)</span></p>
+      </motion.h1>
+
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
+        <Link
+          href="#contact"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
+        >
+          Contact me here{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="/CV.pdf"
+          download
+        >
+          Download CV{" "}
+          {/* <HiDownload className="opacity-60 group-hover:translate-y-1 transition" /> */}
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://linkedin.com"
+          target="_blank"
+        >
+          <BsLinkedin />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://github.com/Yustes88"
+          target="_blank"
+        >
+          <FaGithubSquare />
+        </a>
+      </motion.div>
     </section>
     </>
   )

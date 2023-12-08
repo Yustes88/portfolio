@@ -31,7 +31,7 @@ body {
 @layer components {
   .bulb {
     opacity: 0;
-    animation: flickerI 3s linear 1s both, pulse 2s linear 4s infinite;
+    animation: pulse 2s linear 4s infinite;
   }
 
   .glowing-txt {

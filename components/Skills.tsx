@@ -33,7 +33,7 @@ export default function Skills() {
           duration: 1,
           ease: 'easeIn'
         }}
-        className="mb-28 mt-16 text-center sm:mb-40" id="skills" ref={ref}>
+        className="mb-28 pt-28 text-center sm:mb-40" id="skills" ref={ref}>
             <h2 className="text-3xl font-medium capitalize mb-8 text-center">
                 My skills
             </h2>
