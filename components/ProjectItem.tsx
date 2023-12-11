@@ -13,7 +13,10 @@ type ProjectItemProps = {
 }
 
 
-const ProjectItem:React.FC<ProjectItemProps> = (data) => {
+const ProjectItem:React.FC<ProjectItemProps> = ({
+  data, 
+}) => {
+
   return (
     <motion.div  
     initial={{
@@ -25,11 +28,12 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
     transition={{
       duration: 1,
       ease: 'easeIn'
-    }} className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+    }} 
+    className={`mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8`}>
     {/* Project details */}
     <div className="lg:max-w-lg">
       <div className="mt-4">
-        <h3 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{data.data.name}</h3>
+        <h3 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{data.name}</h3>
       </div>
 
       <section aria-labelledby="information-heading" className="mt-4">
@@ -39,7 +43,7 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
 
 
         <div className="mt-4 space-y-6">
-          <p className="text-base text-gray-500">{data.data.description}</p>
+          <p className="text-base text-slate-300">{data.description}</p>
         </div>
       </section>
       <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
@@ -48,7 +52,7 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
           Used tools
         </h2>
             <ul>
-                {data.data.tools.map((tool) => (
+                {data.tools.map((tool) => (
                     <li key={tool}>{tool}</li>
                 ))}
             </ul>
@@ -58,10 +62,10 @@ const ProjectItem:React.FC<ProjectItemProps> = (data) => {
     </div>
 
     {/* Project image */}
-    <a href={data.data.href} className="container relative">
+    <a href={data.href} className="container relative">
     <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
       <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
-        <Image src={data.data.imageSrc} alt={data.data.imageAlt} width={400} height={400} className=" w-full object-cover" />
+        <Image src={data.imageSrc} alt={data.imageAlt} width={400} height={400} className=" w-full object-cover" />
       </div>
     </div>
     <div className="overlay overlay-fade">
