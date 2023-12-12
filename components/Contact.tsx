@@ -26,8 +26,8 @@ export default function Contact() {
       duration: 2,
       ease: 'easeIn'
     }} 
-    className="relative isolate bg-gray-900" id='contact' ref={ref}>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    className="relative bg-gray-900" id='contact' ref={ref}>
+      <div className="mx-auto grid max-w-[60rem] grid-cols-1 lg:grid-cols-2 px-6">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
             <h2 className="text-4xl heading font-medium capitalize mb-8">Get in touch</h2>
@@ -60,7 +60,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form method="POST" ref={formRef} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+        <form method="POST" ref={formRef} className="px-4 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
           const {data, error} = await sendEmail(formData)
 
