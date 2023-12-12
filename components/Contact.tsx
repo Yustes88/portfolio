@@ -23,7 +23,7 @@ export default function Contact() {
       opacity: 1,
     }}
     transition={{
-      duration: 2,
+      duration: 1.5,
       ease: 'easeIn'
     }} 
     className="relative bg-[#1D1C21]" id='contact' ref={ref}>
@@ -60,7 +60,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form method="POST" ref={formRef} className="px-4 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+        <form method="POST" ref={formRef} className="px-4 pb-24 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
           const {data, error} = await sendEmail(formData)
 
