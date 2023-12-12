@@ -27,7 +27,7 @@ export default function ProjectsList() {
     }}
      className="text-white" id='projects' ref={ref}>
         <div className="mx-auto max-w-2xl px-4 lg:max-w-5xl lg:px-8">
-          <div className="pb-10">
+          <div className="border-b border-slate-500 pb-10">
             <Heading>My projects</Heading>
             <p className="mt-4 text-base text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, impedit? Dolorum, debitis harum. Sit illo dolorum excepturi obcaecati iusto ducimus recusandae in, facere doloribus vero ad suscipit, saepe ea a?
