@@ -55,7 +55,7 @@ export default function About() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hey, I&apos;m Yulya.</span> I&apos;m a{" "}
-        <span className="glowing-txt">front<span className='faulty-letter'>end</span> developer.</span>
+        <span className="glowing-txt">fr<span className='faulty-letter'>ont</span>end developer.</span>
         <p>I enjoy
         building <span className="italic">websites</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span></p>

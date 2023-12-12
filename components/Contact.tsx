@@ -23,11 +23,11 @@ export default function Contact() {
       opacity: 1,
     }}
     transition={{
-      duration: 2,
+      duration: 1.5,
       ease: 'easeIn'
     }} 
-    className="relative isolate bg-gray-900" id='contact' ref={ref}>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    className="relative bg-[#1D1C21]" id='contact' ref={ref}>
+      <div className="mx-auto grid lg:max-w-[60rem] max-w-[40rem] grid-cols-1 lg:grid-cols-2 px-6">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
             <h2 className="text-4xl heading font-medium capitalize mb-8">Get in touch</h2>
@@ -60,7 +60,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form method="POST" ref={formRef} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+        <form method="POST" ref={formRef} className="px-4 pb-24 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
           const {data, error} = await sendEmail(formData)
 
@@ -84,9 +84,9 @@ export default function Contact() {
                     type="text"
                     name="first-name"
                     id="first-name"
-                    placeholder='Your name'
+                    placeholder='Example'
                     autoComplete="given-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-[#dffcff] focus:ring-2 focus:ring-inset focus:ring-[#dffcff] sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -101,9 +101,9 @@ export default function Contact() {
                     name="email"
                     id="email"
                     maxLength={500}
-                    placeholder='Your email'
+                    placeholder='example@gmail.com'
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-[#dffcff] focus:ring-2 focus:ring-inset focus:ring-[#dffcff] sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -116,11 +116,11 @@ export default function Contact() {
                   <textarea
                     name="message"
                     id="message"
-                    placeholder='Your message'
+                    placeholder='Anything you would like to share'
                     required
                     maxLength={5000}
                     rows={4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-[#dffcff] focus:ring-2 focus:ring-inset focus:ring-[#dffcff] sm:text-sm sm:leading-6"
                     defaultValue={''}
                   />
                 </div>
