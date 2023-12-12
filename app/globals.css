@@ -68,9 +68,6 @@ body {
     background-color: rgba(0,0,0); 
   } 
 
-  .input-color {
-    color: var(--glow-color);
-  }
   
 .container:hover .overlay { 
   opacity: 0.8; 
