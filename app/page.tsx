@@ -4,6 +4,7 @@ import ProjectsList from '@/components/ProjectsList'
 import Skills from '@/components/Skills'
 import { Toaster } from 'react-hot-toast'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 
 export default function Home() {
 
@@ -18,6 +19,7 @@ export default function Home() {
           <Contact/>
           <Toaster position='top-right'/>
       </main>
+      <Footer/>
     </>
   )
 }

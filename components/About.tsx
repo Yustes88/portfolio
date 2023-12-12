@@ -54,7 +54,7 @@ export default function About() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hey, I&apos;m Yulya.</span> I&apos;m a{" "}
+        <span className="font-bold">Hey, I&apos;m Julia.</span> I&apos;m a{" "}
         <span className="glowing-txt">fr<span className='faulty-letter'>ont</span>end developer.</span>
         <p>I enjoy
         building <span className="italic">websites</span>. My focus is{" "}
