@@ -8,7 +8,7 @@ const { pending } = useFormStatus();
   return (
     <button
       type="submit"
-      className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:scale-100 disabled:bg-opacity-65"
+      className="rounded-md bg-white btn-shadow px-3.5 py-2.5 text-center text-sm transition font-semibold text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:scale-100 disabled:bg-opacity-65"
       aria-disabled={pending}
     >
       {pending ? (
