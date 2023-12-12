@@ -24,7 +24,7 @@ export default function About() {
      <section
       ref={ref}
       id="about"
-      className="pt-32 max-w-[50rem] h-[100vh] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="pt-32 max-w-[50rem] h-[100vh] text-center mb-16 md:mb-4 sm:mb-0  scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
