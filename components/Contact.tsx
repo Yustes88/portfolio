@@ -27,7 +27,7 @@ export default function Contact() {
       ease: 'easeIn'
     }} 
     className="relative bg-[#1D1C21]" id='contact' ref={ref}>
-      <div className="mx-auto grid max-w-[60rem] grid-cols-1 lg:grid-cols-2 px-6">
+      <div className="mx-auto grid lg:max-w-[60rem] max-w-[40rem] grid-cols-1 lg:grid-cols-2 px-6">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
             <h2 className="text-4xl heading font-medium capitalize mb-8">Get in touch</h2>
