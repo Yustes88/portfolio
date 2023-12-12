@@ -26,7 +26,7 @@ export default function ProjectsList() {
       ease: 'easeIn'
     }}
      className="text-white" id='projects' ref={ref}>
-        <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 lg:max-w-5xl lg:px-8">
           <div className="pb-10 pt-24">
             <Heading>My projects</Heading>
             <p className="mt-4 text-base text-gray-500">
