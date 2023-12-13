@@ -12,11 +12,11 @@ export default function About() {
 
 
   function setActiveSection(arg0: string) {
-    throw new Error('Function not implemented.');
+    console.log('Function not implemented.');
   }
 
   function setTimeOfLastClick(arg0: number) {
-    throw new Error('Function not implemented.');
+    console.log('Function not implemented.');
   }
 
   return (
@@ -70,10 +70,10 @@ export default function About() {
         }}
       >
         <Link
-          href="#contact"
+          href="#contacts"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            setActiveSection("Contact");
+            setActiveSection("Contacts");
             setTimeOfLastClick(Date.now());
           }}
         >
