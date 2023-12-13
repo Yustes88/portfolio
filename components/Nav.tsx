@@ -27,7 +27,7 @@ export default function Nav() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <div className="flex lg:hidden fixed top-4 right-4">
+      <div className={`flex lg:hidden fixed top-4 right-4 ${mobileMenuOpen ? 'hidden' : ''}`}>
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
