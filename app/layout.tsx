@@ -6,7 +6,7 @@ import ActiveSectionContextProvider from '@/context/active-section-context'
 const montserrat = Montserrat({ subsets: ['latin-ext'] })
 
 export const metadata: Metadata = {
-  title: 'Julia - Frontend Deveoper',
+  title: 'Julia - Frontend Developer',
   description: 'Frontend portfolio website',
 }
 

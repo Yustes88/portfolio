@@ -30,7 +30,7 @@ export default function ProjectsList() {
           <div className="border-b border-slate-500 pb-10">
             <Heading>My projects</Heading>
             <p className="mt-4 text-base text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, impedit? Dolorum, debitis harum. Sit illo dolorum excepturi obcaecati iusto ducimus recusandae in, facere doloribus vero ad suscipit, saepe ea a?
+            Step into the world of my frontend projects, showcasing my ability to craft intuitive and engaging web interfaces.
             </p>
           </div>
             {projects.map((project) => (
