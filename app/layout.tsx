@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
 import ActiveSectionContextProvider from '@/context/active-section-context'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin-ext'] })
 
 export const metadata: Metadata = {
   title: 'Julia - Frontend Deveoper',
@@ -18,7 +18,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className='!scroll-smooth'>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
       <ActiveSectionContextProvider>
           {children}
       </ActiveSectionContextProvider>
