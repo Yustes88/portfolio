@@ -60,7 +60,7 @@ export default function Contact() {
             </dl>
           </div>
         </div>
-        <form method="POST" ref={formRef} className="px-4 pb-24 sm:pb-32 lg:px-8 lg:py-48"
+        <form ref={formRef} className="px-4 pb-24 sm:pb-32 lg:px-8 lg:py-48"
         action={async(formData) => {
           const {data, error} = await sendEmail(formData)
 

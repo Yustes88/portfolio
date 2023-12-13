@@ -2,6 +2,7 @@
 
 import ContactFormEmail from '@/email/contact-form-email'
 import { getErrorMessage, validateString } from '@/utils/utils'
+import { renderAsync } from '@react-email/components'
 import React from 'react'
 import { Resend } from 'resend'
 
@@ -11,6 +12,8 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export const sendEmail = async(formData: FormData) => {
     const senderEmail = formData.get('email')
     const message = formData.get('message')
+
+
 
 
     if(!validateString(senderEmail, 500)) {
@@ -37,6 +40,7 @@ export const sendEmail = async(formData: FormData) => {
                 message: message as string,
                 senderEmail: senderEmail as string,
               }),
+              html: html,
           })
       } catch(error: unknown) {
         return {
@@ -48,3 +52,7 @@ export const sendEmail = async(formData: FormData) => {
         data,
       };
   }
+
+function MagicLinkEmail(arg0: { url: any; host: any }): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
+  throw new Error('Function not implemented.')
+}
