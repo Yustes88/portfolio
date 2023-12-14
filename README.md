@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+This is a Next.js-based website showcasing my skills as a frontend developer. It utilizes Tailwind CSS for rapid styling, Resend and React Email for simplified email functionality, and Framer Motion to create smooth animations.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Frontend:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Next.js (React framework)
+* React (JavaScript library)
+* Tailwind CSS (Utility-first CSS framework)
+* Resend and React Email (JavaScript library for sending emails)
+* Framer Motion (JavaScript library for animations)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* **Responsive Design:** The website seamlessly adapts to various screen sizes and devices.
+* **Tailwind CSS:** Tailwind CSS provides a consistent and stylish UI, enabling quick styling without the need for excessive custom CSS.
+* **Resend and React Email:** Easy-to-use email functionality allows for seamless communication with visitors and potential clients.
+* **Framer Motion:** Smooth and fluid animations enhance the user experience and showcase my animation skills.
 
-## Learn More
+## Demo
 
-To learn more about Next.js, take a look at the following resources:
+View the live demo of my portfolio website: [https://portfolio-yustes88.vercel.app/](Portfolio)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository: `git clone https://github.com/[Your GitHub Username]/your-portfolio-website.git`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Install dependencies: `npm install` or `yarn install`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Run the development server: `npm run dev` or `yarn dev`
+
+4. Open the website in your browser: [Insert local development URL]
+
+## Contributing
+
+Contributions are welcome! Please open an issue if you have any feedback or suggestions.
+________________________________________________________________________________________
+
+Thank you!
