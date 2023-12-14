@@ -1,14 +1,14 @@
 export const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Git",
-    "Tailwind",
-    "Redux",
-    "Framer Motion",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Git",
+  "TypeScript",
+  "TailwindCSS",
+  "Redux",
+  "Framer Motion",
 ]
 
 export const navigation = [
