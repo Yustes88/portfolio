@@ -49,7 +49,7 @@ const ProjectItem:React.FC<ProjectItemProps> = ({
       <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
       <section aria-labelledby="options-heading">
         <h4 id="options-heading">
-          Used tools
+           Technical Scope
         </h4>
             <ul className="text-sm tracking-wide leading-6 text-slate-300">
                 {data.tools.map((tool) => (
