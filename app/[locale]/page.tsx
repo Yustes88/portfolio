@@ -5,6 +5,7 @@ import Skills from '@/components/Skills'
 import { Toaster } from 'react-hot-toast'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { useTranslations } from 'next-intl'
 
 export default function Home() {
 

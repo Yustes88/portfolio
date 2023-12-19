@@ -1,0 +1,12 @@
+{
+    "Nav": {
+      "about": 
+        { "name": "Обо мне", "href": "#about" },
+        "skills":
+        { "name": "Навыки", "href": "#skills"},
+        "projects":
+        { "name": "Проекты", "href": "#projects" },
+        "contacts":
+        { "name": "Контакты", "href": "#contacts" }
+    }
+  }
