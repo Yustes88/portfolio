@@ -19,7 +19,7 @@ export type NavProps = {
 };
 
 export type AboutProps = {
-  intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string
+  intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string, btDownload: string, btContact: string
 }
 
 export type SectionName = (typeof navigation)[number]["name"];

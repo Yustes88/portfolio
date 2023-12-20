@@ -10,7 +10,7 @@ import { AboutProps } from '@/types/types';
 
 
 
-export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus, react}: AboutProps) {
+export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus, react, btContact, btDownload}: AboutProps) {
   const { ref } = useSectionInView("About", 0.5);
 
 
@@ -79,7 +79,7 @@ export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus,
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          {btContact}{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -88,7 +88,7 @@ export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus,
           href="/CV.pdf"
           download
         >
-          Download CV{" "}
+          {btDownload}{" "}
           {/* <HiDownload className="opacity-60 group-hover:translate-y-1 transition" /> */}
         </a>
 
