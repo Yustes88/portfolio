@@ -6,8 +6,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
+import { AboutProps } from '@/types/types';
 
-export default function About() {
+
+
+export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus, react}: AboutProps) {
   const { ref } = useSectionInView("About", 0.5);
 
 
@@ -54,11 +57,10 @@ export default function About() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hey, I&apos;m Julia.</span> I&apos;m a{" "}
-        <span className="glowing-txt">fr<span className='faulty-letter'>ont</span>end developer.</span>
-        <p>I enjoy
-        building <span className="italic">websites</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span></p>
+        <span className="font-bold">{intro}</span> {iam}{" "}
+        <span className="glowing-txt">{fr}<span className='faulty-letter'>{ont}</span>{dev}</span>
+        <p>{enjoy}<span className="italic">{websites}</span> {focus}{" "}
+        <span className="underline">{react}</span></p>
       </motion.h1>
 
       <motion.div

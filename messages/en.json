@@ -8,5 +8,16 @@
         { "name": "Projects", "href": "#projects" },
         "contacts":
         { "name": "Contacts", "href": "#contacts" }
+    },
+    "About": {
+      "intro": "Hey, I'm Julia.",
+      "iam": "I'm a",
+      "fr": "fr",
+      "ont": "ont",
+      "dev": "end developer.",
+      "enjoy": "I enjoy building ",
+      "websites": "websites.",
+      "focus": "My focus is",
+      "react": "React (Next.js)"
     }
   }

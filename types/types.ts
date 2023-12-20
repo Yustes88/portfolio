@@ -18,4 +18,8 @@ export type NavProps = {
   navigation: NavItem[];
 };
 
+export type AboutProps = {
+  intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string
+}
+
 export type SectionName = (typeof navigation)[number]["name"];
