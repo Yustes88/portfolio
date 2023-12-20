@@ -9,9 +9,13 @@ export type Project = {
     tools: string[],
 }
 
-export type NavigationItem = {
-    name: string;
-    href: string;
-  };
+type NavItem = {
+  name: string;
+  href: string;
+};
+
+export type NavProps = {
+  navigation: NavItem[];
+};
 
 export type SectionName = (typeof navigation)[number]["name"];

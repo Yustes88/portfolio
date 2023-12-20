@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { navigation } from '@/data/data'
 import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
 
@@ -10,10 +9,10 @@ import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context'
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { NavProps } from '@/types/types';
 
 
-
-export default function Nav() {
+export default function Nav({navigation}: NavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   
