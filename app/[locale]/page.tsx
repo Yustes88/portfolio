@@ -11,6 +11,7 @@ export default function Home() {
   const keys = ['about', 'skills', 'projects', 'contacts'];
   const t = useTranslations('Nav');
   const tAbout = useTranslations('About')
+  const tSkills = useTranslations('Skills')
 
   const translationIntoArray = (tr: string[]) => {
     const array: { name: string; href: string }[] = [];
@@ -34,7 +35,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-between">
       <Nav navigation={trNav}/>
           <About btContact={tAbout('btContact')} btDownload={tAbout('btDownload')} intro = {tAbout('intro')} iam={tAbout('iam')} fr={tAbout('fr')} ont={tAbout('ont')} dev={tAbout('dev')} enjoy={tAbout('enjoy')} websites={tAbout('websites')} focus={tAbout('focus')} react={tAbout('react')}/>
-          <Skills/>
+          <Skills title={tSkills('title')}/>
           <ProjectsList/>
           <Contact/>
           <Toaster position='top-right'/>

@@ -21,5 +21,8 @@
       "react": "React (Next.js)",
       "btContact": "Contact me here",
       "btDownload": "Download CV"
+    },
+    "Skills": {
+      "title": "My Skills"
     }
   }

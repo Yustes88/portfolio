@@ -4,6 +4,7 @@ import { skillsData } from "@/data/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 import Heading from "./Heading";
+import { SkillsProps } from "@/types/types";
 
 const fadeInAnimationVariants = {
     initial: {
@@ -19,7 +20,7 @@ const fadeInAnimationVariants = {
     }),
   };
 
-export default function Skills() {
+export default function Skills({title}: SkillsProps) {
     const { ref } = useSectionInView("Skills", 0.5);
 
     return(
@@ -35,7 +36,7 @@ export default function Skills() {
           ease: 'easeIn'
         }}
         className="mb-28 pt-28 text-center sm:mb-40" id="skills" ref={ref}>
-           <Heading>My skills</Heading>
+           <Heading>{title}</Heading>
             <ul className="flex flex-wrap flex-row justify-center gap-2 p-4 text-lg text-gray-800">
                 {skillsData.map((skill, index) => (
                     <motion.li

@@ -21,5 +21,8 @@
       "react": "React (Next.js)",
       "btContact": "Связаться",
       "btDownload": "Скачать резюме"
+    },
+    "Skills": {
+      "title": "Навыки"
     }
   }

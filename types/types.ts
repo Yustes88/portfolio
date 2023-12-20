@@ -22,4 +22,8 @@ export type AboutProps = {
   intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string, btDownload: string, btContact: string
 }
 
+export type SkillsProps = {
+  title: string
+}
+
 export type SectionName = (typeof navigation)[number]["name"];
