@@ -14,6 +14,7 @@ export default function Home() {
   const tAbout = useTranslations('About')
   const tSkills = useTranslations('Skills')
   const tProjects = useTranslations('Projects')
+  const tContacts = useTranslations('Contacts')
 
   const trAboutIntoArray = (tr: string[]) => {
     const array: { name: string; href: string }[] = [];
@@ -57,7 +58,7 @@ export default function Home() {
           <About btContact={tAbout('btContact')} btDownload={tAbout('btDownload')} intro = {tAbout('intro')} iam={tAbout('iam')} fr={tAbout('fr')} ont={tAbout('ont')} dev={tAbout('dev')} enjoy={tAbout('enjoy')} websites={tAbout('websites')} focus={tAbout('focus')} react={tAbout('react')}/>
           <Skills title={tSkills('title')}/>
           <ProjectsList title={tProjects('title')} intro={tProjects('intro')} scope={tProjects('scope')} link={tProjects('link')} projects = {trProjectsList}/>
-          <Contact/>
+          <Contact title={tContacts('title')} cta1={tContacts('cta1')} cta2={tContacts('cta2')} name={tContacts('name')} nameEx={tContacts('nameEx')} email={tContacts('email')} message={tContacts('message')} messageEx={tContacts('messageEx')}/>
           <Toaster position='top-right'/>
       </main>
       <Footer/>

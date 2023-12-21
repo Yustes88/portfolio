@@ -47,5 +47,15 @@
           "imageAlt": "Blog project screenshot.",
           "tools": "NextJS, React, Typescript, Mantine, TailwindCSS"
         }    
+    },
+    "Contacts": {
+      "title": "Get in touch",
+      "cta1": "Please contact me directly at",
+      "cta2": "or through this form",
+      "name": "Your name",
+      "nameEx": "Joe",
+      "email": "Your email",
+      "message": "Your message",
+      "messageEx": "Anything you would like to share"
     }
   }

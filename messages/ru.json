@@ -47,5 +47,15 @@
           "imageAlt": "Blog project screenshot.",
           "tools": "NextJS, React, Typescript, Mantine, TailwindCSS"
         }    
+    },
+    "Contacts": {
+      "title": "Связь",
+      "cta1": "Свяжитесь по почте",
+      "cta2": "или через данную форму.",
+      "name": "Имя",
+      "nameEx": "Иван",
+      "email": "Почта",
+      "message": "Комментарий",
+      "messageEx": "Оставьте Ваш комментарий тут"
     }
   }
