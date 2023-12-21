@@ -18,9 +18,10 @@ type ContactProps = {
   email: string,
   message: string,
   messageEx: string,
+  submit: string
 }
 
-export default function Contact({title, cta1, cta2, name, nameEx, email, message, messageEx}: ContactProps) {
+export default function Contact({title, cta1, cta2, name, nameEx, email, message, messageEx, submit}: ContactProps) {
   const formRef: React.Ref<HTMLFormElement> = useRef<HTMLFormElement>(null);
   const { ref } = useSectionInView("Contacts", 0.5);
 
@@ -138,7 +139,7 @@ export default function Contact({title, cta1, cta2, name, nameEx, email, message
               </div>
             </div>
             <div className="mt-8 flex justify-end">
-              <SubmitButton/>
+              <SubmitButton title={submit}/>
             </div>
           </div>
         </form>
