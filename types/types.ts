@@ -6,7 +6,7 @@ export type Project = {
     description: string,
     imageSrc: string,
     imageAlt: string,
-    tools: string[],
+    tools: string,
 }
 
 type NavItem = {

@@ -8,12 +8,14 @@ import { useTranslations } from 'next-intl'
 import About from '@/components/About'
 
 export default function Home() {
-  const keys = ['about', 'skills', 'projects', 'contacts'];
+  const keysNav = ['about', 'skills', 'projects', 'contacts'];
+  const keysProjects = ['spotify', 'blog']
   const t = useTranslations('Nav');
   const tAbout = useTranslations('About')
   const tSkills = useTranslations('Skills')
+  const tProjects = useTranslations('Projects')
 
-  const translationIntoArray = (tr: string[]) => {
+  const trAboutIntoArray = (tr: string[]) => {
     const array: { name: string; href: string }[] = [];
 
     tr.map((key) => (
@@ -26,7 +28,25 @@ export default function Home() {
     return array
   }
 
-  const trNav = translationIntoArray(keys)
+  const trNav = trAboutIntoArray(keysNav)
+
+  const trProjectsIntoArray = (tr: string[]) => {
+    const array: { name: string; href: string; description: string; imageSrc: string; imageAlt: string; tools: string; }[] = [];
+
+    tr.map((key) => (
+      array.push({
+        name: tProjects(`${key}.name`),
+        href: tProjects(`${key}.href`),
+        description: tProjects(`${key}.description`),
+        imageSrc: tProjects(`${key}.imageSrc`),
+        imageAlt: tProjects(`${key}.imageAlt`),
+        tools: tProjects(`${key}.tools`),
+      })
+    ))
+
+    return array
+  }
+  const trProjectsList = trProjectsIntoArray(keysProjects)
 
 
   return (
@@ -36,7 +56,7 @@ export default function Home() {
       <Nav navigation={trNav}/>
           <About btContact={tAbout('btContact')} btDownload={tAbout('btDownload')} intro = {tAbout('intro')} iam={tAbout('iam')} fr={tAbout('fr')} ont={tAbout('ont')} dev={tAbout('dev')} enjoy={tAbout('enjoy')} websites={tAbout('websites')} focus={tAbout('focus')} react={tAbout('react')}/>
           <Skills title={tSkills('title')}/>
-          <ProjectsList/>
+          <ProjectsList title={tProjects('title')} intro={tProjects('intro')} scope={tProjects('scope')} link={tProjects('link')} projects = {trProjectsList}/>
           <Contact/>
           <Toaster position='top-right'/>
       </main>

@@ -28,6 +28,8 @@
     "Projects": {
       "title": "My projects",
       "intro": "Step into the world of my frontend projects, showcasing my ability to craft intuitive and engaging web interfaces.",
+      "scope": "Technical Scope",
+      "link": "Go to project",
         "spotify": {
           "name": "Spotify Clone",
           "href": "https://spotify-clone-znti.vercel.app/",
