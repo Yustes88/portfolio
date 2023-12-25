@@ -14,14 +14,16 @@ export default function LanguageSwitcher() {
 
  return(
   <>
+  <div className="flex justify-center items-center">
+
   <Link className={clsx(
-                  "flex w-full items-center justify-center px-2 py-2 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "bg-gray-100 rounded-full inset-0 -z-10 dark:bg-gray-800":
-                      pathname === '/en',
-                  }
-                )}
-  href="/en" locale="en">
+    "flex w-full items-center justify-center px-2 py-2 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+    {
+      "bg-gray-100 rounded-full inset-0 -z-10 dark:bg-gray-800":
+      pathname === '/en',
+    }
+    )}
+    href="/en" locale="en">
     En
   </Link>{" "}
   |{" "}
@@ -37,6 +39,7 @@ export default function LanguageSwitcher() {
   </Link>
   <br />
   <br />
+    </div>
 </>
  )
 }
