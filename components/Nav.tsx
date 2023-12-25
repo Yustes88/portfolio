@@ -10,6 +10,7 @@ import { useActiveSectionContext } from '@/context/active-section-context'
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { NavProps } from '@/types/types';
+import LanguageSwitcher from './LanguageSwitcher';
 
 
 export default function Nav({navigation}: NavProps) {
@@ -76,6 +77,13 @@ export default function Nav({navigation}: NavProps) {
               </Link>
             </motion.li>
           ))}
+          <motion.li
+              className="h-3/4 flex items-center justify-center relative"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+          <LanguageSwitcher/>
+            </motion.li>
         </ul>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
