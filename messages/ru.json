@@ -10,7 +10,7 @@
         { "name": "Контакты", "locale" : "Contacts", "href": "#contacts" }
     },
     "About": {
-      "intro": "Привет, я Юля.",
+      "intro": "Привет, это Юля.",
       "iam": "Я",
       "fr": "фр",
       "ont": "онт",
