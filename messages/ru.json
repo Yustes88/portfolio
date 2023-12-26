@@ -1,7 +1,7 @@
 {
     "Nav": {
       "about": 
-        { "name": "Обо мне", "locale" : "About", "href": "#about" },
+        { "name": "Главная", "locale" : "About", "href": "#about" },
         "skills":
         { "name": "Навыки", "locale" : "Skills", "href": "#skills"},
         "projects":
