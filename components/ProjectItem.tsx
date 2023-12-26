@@ -10,11 +10,15 @@ import { motion } from "framer-motion";
 //TODO: fix types
 type ProjectItemProps = {
     data: Project;
+    scope: string;
+    link: string;
 }
 
 
 const ProjectItem:React.FC<ProjectItemProps> = ({
   data, 
+  scope,
+  link
 }) => {
 
   return (
@@ -49,13 +53,11 @@ const ProjectItem:React.FC<ProjectItemProps> = ({
       <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
       <section aria-labelledby="options-heading">
         <h4 id="options-heading">
-           Technical Scope
+           {scope}
         </h4>
-            <ul className="text-sm tracking-wide leading-6 text-slate-300">
-                {data.tools.map((tool) => (
-                    <li key={tool}>{tool}</li>
-                ))}
-            </ul>
+            <div className="text-sm tracking-wide leading-6 text-slate-300">
+                {data.tools}
+            </div>
 
       </section>
     </div>
@@ -70,7 +72,7 @@ const ProjectItem:React.FC<ProjectItemProps> = ({
     </div>
     <div className="overlay overlay-fade">
       <div className="flex justify-center gap-x-2 h-full items-center text-white bg-black">
-        <div className="bg-black">Go to project</div>
+        <div className="bg-black">{link}</div>
         <FaExternalLinkAlt/>
       </div>
     </div>

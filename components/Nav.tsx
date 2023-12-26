@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { navigation } from '@/data/data'
 import { HiBars3 } from 'react-icons/hi2'
 import {AiOutlineClose} from 'react-icons/ai'
 
@@ -10,10 +9,11 @@ import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context'
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { NavProps } from '@/types/types';
+import LanguageSwitcher from './LanguageSwitcher';
 
 
-
-export default function Nav() {
+export default function Nav({navigation}: NavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   
@@ -38,7 +38,7 @@ export default function Nav() {
           </button>
         </div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
+      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:py-0">
         <ul className="md:flex hidden w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {navigation.map((link) => (
             <motion.li
@@ -52,18 +52,18 @@ export default function Nav() {
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
                     "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
+                      activeSection === link.locale,
                   }
                 )}
                 href={link.href}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  setActiveSection(link.locale);
                   setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
 
-                {link.name === activeSection && (
+                {link.locale === activeSection && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
@@ -77,6 +77,13 @@ export default function Nav() {
               </Link>
             </motion.li>
           ))}
+          <motion.li
+              className="h-3/4 flex items-center justify-center relative"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+          <LanguageSwitcher/>
+            </motion.li>
         </ul>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -94,7 +101,7 @@ export default function Nav() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/25">
-              <div className="space-y-2 py-6">
+              <div className="flex flex-col items-center justify-centerspace-y-2 py-6">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -106,7 +113,7 @@ export default function Nav() {
                   </Link>
                 ))}
               </div>
-              
+              <LanguageSwitcher/>
             </div>
           </div>
         </Dialog.Panel>

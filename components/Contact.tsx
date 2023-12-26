@@ -9,7 +9,19 @@ import { useRef } from 'react'
 import { useSectionInView } from '@/hooks/useSectionInView'
 import { motion } from 'framer-motion'
 
-export default function Contact() {
+type ContactProps = {
+  title: string,
+  cta1: string,
+  cta2: string,
+  name: string,
+  nameEx: string,
+  email: string,
+  message: string,
+  messageEx: string,
+  submit: string
+}
+
+export default function Contact({title, cta1, cta2, name, nameEx, email, message, messageEx, submit}: ContactProps) {
   const formRef: React.Ref<HTMLFormElement> = useRef<HTMLFormElement>(null);
   const { ref } = useSectionInView("Contacts", 0.5);
 
@@ -30,9 +42,9 @@ export default function Contact() {
       <div className="mx-auto grid lg:max-w-[60rem] max-w-[40rem] grid-cols-1 lg:grid-cols-2 px-6">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
-            <h2 className="text-4xl heading font-medium capitalize mb-8">Get in touch</h2>
+            <h2 className="text-4xl heading font-medium capitalize mb-8">{title}</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-                Please contact me directly at <a href='mailto:iuliiaobr.io@gmail.com' className='underline'>iuliiaobr.io@gmail.com</a> or through this form
+                {cta1} <a href='mailto:iuliiaobr.io@gmail.com' className='underline'>iuliiaobr.io@gmail.com</a> {cta2}
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
               <div className="flex gap-x-4">
@@ -77,14 +89,14 @@ export default function Contact() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
-                  Your name
+                  {name}
                 </label>
                 <div className="mt-2.5">
                   <input
                     type="text"
                     name="first-name"
                     id="first-name"
-                    placeholder='Example'
+                    placeholder={nameEx}
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-[#dffcff] focus:ring-2 focus:ring-inset focus:ring-[#dffcff] sm:text-sm sm:leading-6"
                   />
@@ -92,7 +104,7 @@ export default function Contact() {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
-                  Your email
+                  {email}
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -110,13 +122,13 @@ export default function Contact() {
               
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
-                  Your message
+                  {message}
                 </label>
                 <div className="mt-2.5">
                   <textarea
                     name="message"
                     id="message"
-                    placeholder='Anything you would like to share'
+                    placeholder={messageEx}
                     required
                     maxLength={5000}
                     rows={4}
@@ -127,7 +139,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="mt-8 flex justify-end">
-              <SubmitButton/>
+              <SubmitButton title={submit}/>
             </div>
           </div>
         </form>

@@ -12,11 +12,11 @@ export const skillsData = [
 ]
 
 export const navigation = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills'},
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contacts', href: '#contacts' },
-  ]
+    { name: 'About', locale: "About",  href: '#about' },
+    { name: 'Skills', locale: "Skills", href: '#skills'},
+    { name: 'Projects', locale: 'Projects',  href: '#projects' },
+    { name: 'Contacts', locale: 'Contacts', href: '#contacts' },
+  ] 
 
 
 export const projects = [

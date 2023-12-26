@@ -1,0 +1,62 @@
+{
+    "Nav": {
+      "about": 
+        { "name": "Главная", "locale" : "About", "href": "#about" },
+        "skills":
+        { "name": "Навыки", "locale" : "Skills", "href": "#skills"},
+        "projects":
+        { "name": "Проекты", "locale" : "Projects", "href": "#projects" },
+        "contacts":
+        { "name": "Контакты", "locale" : "Contacts", "href": "#contacts" }
+    },
+    "About": {
+      "intro": "Привет, я Юля.",
+      "iam": "Я",
+      "fr": "фр",
+      "ont": "онт",
+      "dev": "енд разработчик.",
+      "enjoy": "Я занимаюсь разработкой ",
+      "websites": "веб-сайтов ",
+      "focus": "на основе",
+      "react": "React (Next.js)",
+      "btContact": "Связаться",
+      "btDownload": "Скачать резюме"
+    },
+    "Skills": {
+      "title": "Навыки"
+    },
+    "Projects": {
+      "title": "Проекты",
+      "intro": "Ниже представлены разработанные мною проекты, в основе которых адаптивный и интуитивный интерфейс",
+      "scope": "Технологии",
+      "link": "Перейти к проекту",
+        "spotify": {
+          "name": "Spotify Clone",
+          "href": "https://spotify-clone-znti.vercel.app/",
+          "description": "Данный проект представляет собой клон популярного музыкального сервиса Spotify, разработанный на основе фреймворка Next.js, TypeScript, библиотеки Tailwind CSS, платформы Supabase для аутентификации пользователей и платформы Stripe для обработки платежей внутри приложения.",
+          "imageSrc": "/images/spotify.png",
+          "imageAlt": "Spotify Clone screenshot",
+          "tools": "NextJS, React, TailwindCSS, Typescript, Stripe, Supabase"
+        }, 
+        "blog": {
+          "name": "Blog",
+          "href": "https://blog-steel-alpha-98.vercel.app/",
+          "description":
+          "Данный проект представляет собой блог с фильтрацией постов по теме. Он реализован с использованием современного фреймворка Next.js, библиотеки стилей Tailwind CSS и языка разметки Markdown. Интерфейс блога отличается простотой и интуитивно понятным дизайном.",
+          "imageSrc": "/images/blog.png",
+          "imageAlt": "Blog project screenshot.",
+          "tools": "NextJS, React, Typescript, Mantine, TailwindCSS"
+        }    
+    },
+    "Contacts": {
+      "title": "Связь",
+      "cta1": "Свяжитесь по почте",
+      "cta2": "или через данную форму.",
+      "name": "Имя",
+      "nameEx": "Иван",
+      "email": "Почта",
+      "message": "Комментарий",
+      "messageEx": "Оставьте Ваш комментарий тут",
+      "submit": "Отправить"
+    }
+  }
