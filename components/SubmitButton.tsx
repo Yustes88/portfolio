@@ -17,7 +17,7 @@ const { pending } = useFormStatus();
       aria-disabled={pending}
     >
       {pending ? (
-        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+        <div className="h-5 w-5 text-black animate-spin rounded-full border-b-2 border-[#61efff]"></div>
       ) : (
         <>
           {title}{" "}
