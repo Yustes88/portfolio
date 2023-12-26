@@ -13,7 +13,6 @@ import { AboutProps } from '@/types/types';
 export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus, react, btContact, btDownload}: AboutProps) {
   const { ref } = useSectionInView("About", 0.5);
 
-
   function setActiveSection(arg0: string) {
     console.log('Function not implemented.');
   }

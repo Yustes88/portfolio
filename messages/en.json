@@ -1,13 +1,13 @@
 {
     "Nav": {
       "about": 
-        { "name": "About", "href": "#about" },
+        { "name": "About", "locale" : "About", "href": "#about" },
         "skills":
-        { "name": "Skills", "href": "#skills"},
+        { "name": "Skills", "locale" : "Skills", "href": "#skills"},
         "projects":
-        { "name": "Projects", "href": "#projects" },
+        { "name": "Projects", "locale" : "Projects", "href": "#projects" },
         "contacts":
-        { "name": "Contacts", "href": "#contacts" }
+        { "name": "Contacts", "locale" : "Contacts", "href": "#contacts" }
     },
     "About": {
       "intro": "Hey, I'm Julia.",

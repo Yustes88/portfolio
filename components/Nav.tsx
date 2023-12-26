@@ -52,18 +52,18 @@ export default function Nav({navigation}: NavProps) {
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
                     "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
+                      activeSection === link.locale,
                   }
                 )}
                 href={link.href}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  setActiveSection(link.locale);
                   setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
 
-                {link.name === activeSection && (
+                {link.locale === activeSection && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"

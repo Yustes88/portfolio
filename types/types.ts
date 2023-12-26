@@ -11,6 +11,7 @@ export type Project = {
 
 type NavItem = {
   name: string;
+  locale: string;
   href: string;
 };
 
@@ -26,4 +27,4 @@ export type SkillsProps = {
   title: string
 }
 
-export type SectionName = (typeof navigation)[number]["name"];
+export type SectionName = (typeof navigation)[number]["locale"];

@@ -1,13 +1,13 @@
 {
     "Nav": {
       "about": 
-        { "name": "Обо мне", "href": "#about" },
+        { "name": "Обо мне", "locale" : "About", "href": "#about" },
         "skills":
-        { "name": "Навыки", "href": "#skills"},
+        { "name": "Навыки", "locale" : "Skills", "href": "#skills"},
         "projects":
-        { "name": "Проекты", "href": "#projects" },
+        { "name": "Проекты", "locale" : "Projects", "href": "#projects" },
         "contacts":
-        { "name": "Контакты", "href": "#contacts" }
+        { "name": "Контакты", "locale" : "Contacts", "href": "#contacts" }
     },
     "About": {
       "intro": "Привет, я Юля.",

@@ -17,12 +17,13 @@ export default function Home() {
   const tContacts = useTranslations('Contacts')
 
   const trAboutIntoArray = (tr: string[]) => {
-    const array: { name: string; href: string }[] = [];
+    const array: { name: string; locale: string; href: string }[] = [];
 
     tr.map((key) => (
       array.push({
         name: t(`${key}.name`),
-        href: t(`${key}.href`)
+        href: t(`${key}.href`),
+        locale: t(`${key}.locale`)
       })
     ))
 
