@@ -9,6 +9,8 @@ export const skillsData = [
   "TailwindCSS",
   "Redux",
   "Framer Motion",
+  "MongoDB",
+  "Prisma"
 ]
 
 export const navigation = [

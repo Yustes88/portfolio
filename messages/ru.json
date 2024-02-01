@@ -46,7 +46,16 @@
           "imageSrc": "/images/blog.png",
           "imageAlt": "Blog project screenshot.",
           "tools": "NextJS, React, Typescript, Mantine, TailwindCSS"
-        }    
+        },
+        "ecommerce": {
+          "name": "Ecommerce",
+          "href": "https://ecommerce-yustes88.vercel.app/",
+          "description":
+          "Данный проект представляет собой ecommerce-сайт. Он реализован с использованием фреймворка Next.js, Tailwind CSS и базы данных MongoDB. Пользователь может добавлять товары в корзину и в понравившиеся товары, фильтровать товары по категории. Проект ещё в процессе разработки (оплата)",
+          "imageSrc": "/images/ecommerce.png",
+          "imageAlt": "Ecommerce project screenshot.",
+          "tools": "NextJS, React, Typescript, TailwindCSS, MongoDB, Prisma"
+        }            
     },
     "Contacts": {
       "title": "Связь",

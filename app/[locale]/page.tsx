@@ -9,7 +9,7 @@ import About from '@/components/About'
 
 export default function Home() {
   const keysNav = ['about', 'skills', 'projects', 'contacts'];
-  const keysProjects = ['spotify', 'blog']
+  const keysProjects = ['spotify', 'ecommerce', 'blog']
   const t = useTranslations('Nav');
   const tAbout = useTranslations('About')
   const tSkills = useTranslations('Skills')
