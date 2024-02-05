@@ -39,8 +39,8 @@ export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus,
             }}
           >
             <Image
-              src="/images/pro.jpg"
-              alt="Ricardo portrait"
+              src="/images/about.jpg"
+              alt="Julia portrait"
               width="192"
               height="192"
               quality="95"
