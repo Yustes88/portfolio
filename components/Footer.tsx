@@ -9,7 +9,7 @@ export default function Footer() {
       >
         <a
             className=" hover:underline"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/iuliia-obruchkova"
           target="_blank"
         >
           Linkedin
