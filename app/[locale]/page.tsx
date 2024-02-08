@@ -56,7 +56,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-between">
       <Nav navigation={trNav}/>
-          <About btContact={tAbout('btContact')} btDownload={tAbout('btDownload')} intro = {tAbout('intro')} iam={tAbout('iam')} fr={tAbout('fr')} ont={tAbout('ont')} dev={tAbout('dev')} enjoy={tAbout('enjoy')} websites={tAbout('websites')} focus={tAbout('focus')} react={tAbout('react')}/>
+          <About cv={tAbout('cv')} btContact={tAbout('btContact')} btDownload={tAbout('btDownload')} intro = {tAbout('intro')} iam={tAbout('iam')} fr={tAbout('fr')} ont={tAbout('ont')} dev={tAbout('dev')} enjoy={tAbout('enjoy')} websites={tAbout('websites')} focus={tAbout('focus')} react={tAbout('react')}/>
           <Skills title={tSkills('title')}/>
           <ProjectsList title={tProjects('title')} intro={tProjects('intro')} scope={tProjects('scope')} link={tProjects('link')} projects = {trProjectsList}/>
           <Contact title={tContacts('title')} cta1={tContacts('cta1')} cta2={tContacts('cta2')} name={tContacts('name')} nameEx={tContacts('nameEx')} email={tContacts('email')} message={tContacts('message')} messageEx={tContacts('messageEx')} submit={tContacts('submit')}/>

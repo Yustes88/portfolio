@@ -10,7 +10,7 @@ import { AboutProps } from '@/types/types';
 
 
 
-export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus, react, btContact, btDownload}: AboutProps) {
+export default function About({cv, intro, iam, fr, ont, dev, enjoy, websites, focus, react, btContact, btDownload}: AboutProps) {
   const { ref } = useSectionInView("About", 0.5);
 
   function setActiveSection(arg0: string) {
@@ -84,7 +84,7 @@ export default function About({intro, iam, fr, ont, dev, enjoy, websites, focus,
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href={cv}
           download
         >
           {btDownload}{" "}

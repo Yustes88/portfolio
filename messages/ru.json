@@ -20,7 +20,8 @@
       "focus": "на основе",
       "react": "React (Next.js)",
       "btContact": "Связаться",
-      "btDownload": "Скачать резюме"
+      "btDownload": "Скачать резюме",
+      "cv": "/ru/cv.pdf"
     },
     "Skills": {
       "title": "Навыки"
