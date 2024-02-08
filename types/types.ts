@@ -20,7 +20,7 @@ export type NavProps = {
 };
 
 export type AboutProps = {
-  intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string, btDownload: string, btContact: string
+  intro: string, iam: string, fr: string, ont: string, dev: string, enjoy: string, websites: string, focus: string, react: string, btDownload: string, btContact: string, cv: string
 }
 
 export type SkillsProps = {

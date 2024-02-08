@@ -20,7 +20,8 @@
       "focus": "My focus is",
       "react": "React (Next.js)",
       "btContact": "Contact me here",
-      "btDownload": "Download CV"
+      "btDownload": "Download CV",
+      "cv": "/en/cv.pdf"
     },
     "Skills": {
       "title": "My Skills"
