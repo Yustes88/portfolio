@@ -67,19 +67,18 @@ export default function About({
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="font-bold">{intro}</span> {iam}{" "}
-          <span className="glowing-txt">
+          <span className="font-bold text-white">{intro}</span> {iam}{" "}
+          <span className="glowing-txt text-white">
             {fr}
-            <span className="faulty-letter">{ont}</span>
+            <span className="faulty-letter text-white">{ont}</span>
             {dev}
           </span>
           <p>
             {enjoy}
-            <span className="italic">{websites}</span> {focus}{" "}
-            <span className="underline">{react}</span>
+            <span className="italic text-white">{websites}</span> {focus}{" "}
+            <span className="underline text-white">{react}</span>
           </p>
         </motion.h1>
-
 
         <motion.div
           className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 text-lg font-medium"
