@@ -80,6 +80,7 @@ export default function About({
           </p>
         </motion.h1>
 
+
         <motion.div
           className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 text-lg font-medium"
           initial={{ opacity: 0, y: 100 }}
