@@ -37,7 +37,7 @@ export default function About({
       <section
         ref={ref}
         id="about"
-        className="pt-36 md:pt-64 max-w-[50rem] flex flex-col items-center justify-center text-center mb-48 scroll-mt-[100rem]"
+        className="pt-40 max-w-[50rem] flex flex-col items-center justify-center text-center mb-48 scroll-mt-[100rem]"
       >
         <div className="flex items-center justify-center">
           <div className="relative">
