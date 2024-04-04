@@ -3,18 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 54, 53, 61;
+  --background-end-rgb: 0, 0, 0;
   --glow-color: hsl(186 100% 69%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 54, 53, 61;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
@@ -26,7 +18,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
 
 @layer components {
   .bulb {
@@ -43,12 +34,11 @@ body {
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
     animation: text-flicker 3s linear 2;
   }
-  
+
   .faulty-letter {
     opacity: 1;
     animation: faulty-flicker 2s linear 3;
   }
-
 
   .btn-shadow {
     box-shadow: 0 0 15px 1px var(--glow-color);
@@ -56,42 +46,37 @@ body {
 
     &:hover {
       transform: scale(1.1);
-
     }
-
   }
 
-  .overlay { 
-    position: absolute; 
-    transition: all 0.4s ease; 
-    opacity: 0; 
-    background-color: rgba(0,0,0); 
-  } 
+  .overlay {
+    position: absolute;
+    transition: all 0.4s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0);
+  }
 
-  
-.container:hover .overlay { 
-  opacity: 0.8; 
-} 
+  .container:hover .overlay {
+    opacity: 0.8;
+  }
 
-.overlay-fade { 
-  height: 100%; 
-  width: 100%; 
-  top: 0; 
-  background-color: rgba(0,0,0); 
-} 
+  .overlay-fade {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0);
+  }
 
-.icon-shadow {
-  filter: blur(5px);
-  fill: linear-gradient(to right, #fff, transparent 80%);
-  color: #fff;
-}
+  .icon-shadow {
+    filter: blur(5px);
+    fill: linear-gradient(to right, #fff, transparent 80%);
+    color: #fff;
+  }
 
-.heading {
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
-}
+  .heading {
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  }
 
-  
-  
   @keyframes faulty-flicker {
     0% {
       opacity: 0.1;
@@ -117,7 +102,7 @@ body {
     83% {
       opacity: 0.4;
     }
-  
+
     87% {
       opacity: 1;
     }
@@ -126,24 +111,24 @@ body {
       opacity: 1;
     }
   }
-  
+
   @keyframes text-flicker {
     0% {
       opacity: 0.1;
     }
-  
+
     2% {
       opacity: 1;
     }
-  
+
     8% {
       opacity: 0.1;
     }
-  
+
     9% {
       opacity: 1;
     }
-  
+
     12% {
       opacity: 0.1;
     }
@@ -156,14 +141,14 @@ body {
     30% {
       opacity: 1;
     }
-  
+
     70% {
       opacity: 0.7;
     }
     72% {
       opacity: 0.2;
     }
-  
+
     77% {
       opacity: 0.9;
     }
@@ -171,13 +156,12 @@ body {
       opacity: 0.9;
     }
   }
-  
+
   @media only screen and (max-width: 600px) {
-    .glowing{
+    .glowing {
       font-size: 1em;
     }
   }
-    
 
   @keyframes pulse {
     0% {
@@ -190,5 +174,4 @@ body {
       opacity: 1;
     }
   }
-  
 }

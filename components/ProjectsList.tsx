@@ -23,7 +23,7 @@ export default function ProjectsList({
   projects,
   link,
 }: ProjectListProps) {
-  const { ref } = useSectionInView("Projects", 0.4);
+  const { ref } = useSectionInView("Projects", 0.3);
 
   return (
     <motion.section
